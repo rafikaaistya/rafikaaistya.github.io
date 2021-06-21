@@ -8,12 +8,12 @@
   margin-top: 150px;
 }
 
-.border-bottom {
-  border-bottom: 1px solid #c4c4c4;
-}
-
 .mapid {
   height: 180px;
+}
+
+.active {
+  background-color: rgba(50, 151, 203, 1);
 }
 
 /* teks */
@@ -148,7 +148,7 @@
   background-color: rgba(229, 229, 229, 0);
   color: rgba(0, 0, 0, 0.5) !important;
   border: none;
-  width: 540px;
+  width: 545px;
 }
 
 .form-control-login {
@@ -164,7 +164,7 @@
 .search {
   width: 604px;
   background-color: rgba(229, 229, 229, 0.5) !important;
-  border-radius: 20px;
+  border-radius: 8px;
 }
 
 /* poto */
@@ -213,9 +213,24 @@
 }
 
 .card-filter {
+  width: 300px;
+  border-radius: 8px;
+  background-color: #c4c4c4;
+  border: none;
 }
 
 /* border  */
+
+.border-radius-left {
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.border-radius-right {
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
 .border {
   border: 1px solid rgba(196, 196, 196, 0.5) !important;
   /* width: 200px; */
@@ -224,6 +239,14 @@
 .border-head {
   border-top: 1px solid #095b71 !important;
   border-bottom: 1px solid #095b71 !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.border-right {
+  border-right: 1px solid #c4c4c4;
 }
 
 .border-all {
@@ -307,8 +330,13 @@
 
 .navbar {
   background-color: #6a6a6a;
-  max-height: 100vh;
+  min-height: 100vh;
   align-content: flex-start;
+}
+
+.fixed {
+  position: fixed;
+  z-index: 999;
 }
 
 /* chart */
