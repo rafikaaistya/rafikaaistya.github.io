@@ -10,7 +10,7 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.css">
     <style> 
         input:focus {
@@ -42,8 +42,12 @@
         card-atas{
           font-size: 30px !important;
         }
-        #mapid { height: 180px; }
-    </style>
+        #mapid { height: 300px;  }
+        #map { height: 300px; }
+.info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
+.legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }</style>
+        
+    
     <script src="https://cdn.jsdelivr.net/combine/npm/chart.js@3.1.1,npm/chart.js@3.1.1/helpers/helpers.esm.min.js,npm/chart.js@3.1.1/helpers/helpers.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.1/dist/chart.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -57,10 +61,13 @@
     <div>
         <div class="col-12">
             <div class="row">
-                <div class="col-2 m-0 navbar text-white font-medium">
+                
+                <div class="col-2 m-0 navbar fixed text-white font-medium">
                   <div class="mt-5">
                     <div class="row border-bottom pl-3 mt-5">
-                      <p class="mr-2"><img src="assets/images/dashboard-256 1.svg" alt="" width="20"></p>
+                      <p class="mr-2">
+                        <img src="assets/images/dashboard-256 1.svg" alt="" width="20">
+                      </p>
                       <p>Dashboard</p>
                     </div>
                     <div class="d-flex mt-3">
@@ -111,6 +118,7 @@
                     </div>
                   </div>
                 </div>
+                <div class="col-2 m-0 navbar text-white font-medium"></div>
                 <div class="col-10 pt-3 pl-0">
                     <div class="row mb-3 ml-2">
                         <div class="col-10 text-center align-item-center justify-content-center">
@@ -119,19 +127,33 @@
                                 <img src="assets/images/Search.svg" alt="" width="25">
                             </div>
                         </div>
-                        <div class="col-2 text-right">
-                            aaaaaaaaaaaa
+                        <div class="col-2 text-right d-flex justify-content-end">
+                            <p class="pr-2 m-0"><img src="assets/images/notification 1.svg" alt="" width="25"></p>
+                            <p class="m-0"><img src="assets/images/Mask Group.svg" alt="" width="25"></p>
                         </div>
                     </div>
-                    <div class="card ml-0 px-3 py-2 card-dashboard">
+                    <div class="card ml-0 px-3 py-2 card-dashboard mb-3">
                         <div class="row m-1 mb-3">
                           <div class="col d-flex">
                             <img src="assets/images/baseline_home_black_24dp 1.svg" alt="" class="" width="20">
                             <p class="text-primary mb-0 ml-2 text-bold font-large">Dashboard</p> 
                           </div>
-                          <div class="col">
-                            <div class="card">
-                              a
+                          <div class="col p-0 m-0 text-right d-flex justify-content-end">
+                            <div class="card font-medium card-filter ">
+                              <div class="d-flex text-center">
+                                <div class="col active p-1 border-radius-left">
+                                  <p class="m-0">Today</p>
+                                </div>
+                                <div class="col p-1">
+                                  <p class="m-0">Week</p>
+                                </div>
+                                <div class="col p-1">
+                                  <p class="m-0">Month</p>
+                                </div>
+                                <div class="col p-1 border-radius-right">
+                                  <p class="m-0">Year</p>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -255,8 +277,185 @@
                               </div>
                               <div class="col-9">
                                 <div class="card card-peta p-2 text-center">
-                                  <p class="text-bold text-grey1 mb-4 mt-1">Titik Sebaran Perkara</p>
+                                  <p class="text-bold text-grey1 mb-3 mt-1">Titik Sebaran Perkara</p>
                                   <div id="mapid"></div>
+                                  <script type="text/javascript" src="js/us-states.js"></script>
+                                  <script>
+                                    // var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
+                                    // L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                                    // maxZoom: 18,
+                                    // attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+                                    //             'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                                    // id: 'mapbox/streets-v11',
+                                    // tileSize: 512,
+                                    // zoomOffset: -1
+                                    // }).addTo(mymap);
+
+                                    // L.marker([51.5, -0.09]).addTo(mymap);
+
+
+                                    // var map = L.map('mapid').setView([37.8, -96], 4);
+
+	                                  // L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		                                //   maxZoom: 18,
+		                                //   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+			                              //     'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		                                //   id: 'mapbox/light-v9',
+		                                //   tileSize: 512,
+		                                //   zoomOffset: -1
+	                                  // }).addTo(map);
+
+	                                  // // get color depending on population density value
+	                                  // function getColor(d) {
+		                                //   return d > 1000 ? '#800026' :
+				                            //   d > 500  ? '#BD0026' :
+				                            //   d > 200  ? '#E31A1C' :
+				                            //   d > 100  ? '#FC4E2A' :
+				                            //   d > 50   ? '#FD8D3C' :
+				                            //   d > 20   ? '#FEB24C' :
+				                            //   d > 10   ? '#FED976' :
+				                      			//   '#FFEDA0';
+	                                  // }
+
+	                                  // function style(feature) {
+		                                //   return {
+			                              //     weight: 2,
+			                              //     opacity: 1,
+			                              //     color: 'white',
+			                              //     dashArray: '3',
+			                              //     fillOpacity: 0.7,
+			                              //     fillColor: getColor(feature.properties.density)
+		                                //   };
+	                                  // }
+
+	                                  // var geojson = L.geoJson(statesData, {
+		                                //   style: style,
+	                                  // }).addTo(map);
+
+
+                                    var map = L.map('mapid').setView([37.8, -96], 4);
+
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/light-v9',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(map);
+
+
+	// control that shows state info on hover
+	var info = L.control();
+
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		this.update();
+		return this._div;
+	};
+
+	info.update = function (props) {
+		this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
+			'<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
+			: 'Hover over a state');
+	};
+
+	info.addTo(map);
+
+
+	// get color depending on population density value
+	function getColor(d) {
+		return d > 1000 ? '#800026' :
+				d > 500  ? '#BD0026' :
+				d > 200  ? '#E31A1C' :
+				d > 100  ? '#FC4E2A' :
+				d > 50   ? '#FD8D3C' :
+				d > 20   ? '#FEB24C' :
+				d > 10   ? '#FED976' :
+							'#FFEDA0';
+	}
+
+	function style(feature) {
+		return {
+			weight: 2,
+			opacity: 1,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor(feature.properties.density)
+		};
+	}
+
+	function highlightFeature(e) {
+		var layer = e.target;
+
+		layer.setStyle({
+			weight: 5,
+			color: '#666',
+			dashArray: '',
+			fillOpacity: 0.7
+		});
+
+		if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+			layer.bringToFront();
+		}
+
+		info.update(layer.feature.properties);
+	}
+
+	var geojson;
+
+	function resetHighlight(e) {
+		geojson.resetStyle(e.target);
+		info.update();
+	}
+
+	function zoomToFeature(e) {
+		map.fitBounds(e.target.getBounds());
+	}
+
+	function onEachFeature(feature, layer) {
+		layer.on({
+			mouseover: highlightFeature,
+			mouseout: resetHighlight,
+			click: zoomToFeature
+		});
+	}
+
+	geojson = L.geoJson(statesData, {
+		style: style,
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+	map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
+
+
+	var legend = L.control({position: 'bottomright'});
+
+	legend.onAdd = function (map) {
+
+		var div = L.DomUtil.create('div', 'info legend'),
+			grades = [0, 10, 20, 50, 100, 200, 500, 1000],
+			labels = [],
+			from, to;
+
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+			labels.push(
+				'<i style="background:' + getColor(from + 1) + '"></i> ' +
+				from + (to ? '&ndash;' + to : '+'));
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend.addTo(map);
+
+                                  </script>
                                 </div>
                               </div>
                             </div>
@@ -276,7 +475,7 @@
                                         <canvas id="myChart2" ></canvas>
                                           <script>
                                               var ctx = document.getElementById('myChart2');
-                                              ctx.height = 300;
+                                              ctx.height = 400;
                                               var myChart2 = new Chart(ctx, {
                                               type: 'doughnut',
                                               data: {
@@ -369,7 +568,7 @@
                                               'Mei'
                                             ],
                                               datasets: [{
-                                                // minBarLength: 100,
+                                                label: 'PK',
                                                 data: [90, 30, 50, 80, 60],
                                                 backgroundColor: [
                                                   'rgba(255, 168, 0, 1)',
@@ -388,8 +587,7 @@
                                                 borderWidth: 1
                                               },
                                               {
-                                                // minBarLength: 100,
-                                                
+                                                label: 'Banding',
                                                 data: [70,70,70,70,70],
                                                 backgroundColor: [
                                                   'rgba(255, 199, 0, 1)',
@@ -408,8 +606,7 @@
                                                 borderWidth: 1
                                               },
                                               {
-                                                // minBarLength: 100,
-                                                
+                                                label: 'Kasasi',
                                                 data: [50, 50, 40, 60, 90],
                                                 backgroundColor: [
                                                   'rgba(255, 245, 0, 1)',
@@ -469,8 +666,8 @@
                                             'Mei'
                                           ],
                                             datasets: [{
-                                              // minBarLength: 100,
-                                              data: [50, 80, 90, 65, 80],
+                                              label:'Perempuan',
+                                              data: [10, 30, 20, 45, 30],
                                               backgroundColor: [
                                                 'rgba(70, 202, 58, 1)',
                                                 'rgba(70, 202, 58, 1)',
@@ -488,8 +685,7 @@
                                               borderWidth: 1
                                             },
                                             {
-                                              // minBarLength: 100,
-                                              
+                                              label:'Laki-Laki',
                                               data: [50, 80, 90, 65, 80],
                                               backgroundColor: [
                                                 'rgba(255, 199, 0, 1)',
@@ -511,7 +707,6 @@
                                             
                                           },
                                           options: {
-                                            
                                             scales: {
                                               y: {
                                               beginAtZero: true,
@@ -530,6 +725,9 @@
                             </div>
                           </div>
                         </div>
+                    </div>
+                    <div class="text-center text-white">
+                      <p>Copyright © 2021-2022 <a class="text-blue">Kejaksaan Agung</a>. All rights reserved.</p>
                     </div>
                 </div>
             </div>
@@ -561,11 +759,6 @@
       integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-   crossorigin=""/>
-   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-   crossorigin=""></script>
+    
   </body>
 </html>
