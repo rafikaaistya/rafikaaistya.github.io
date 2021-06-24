@@ -490,20 +490,13 @@
                                   </div>
                                   <div class="row mb-3">
                                     <div class="col-12 text-center">
-                                      <div class="chart">
-                                        <canvas id="myChart2" ></canvas>
+                                      <div class="chart mx-5 my-0 p-1 d-flex align-content-center align-items-center align-self-center justify-content-center">
+                                        <canvas id="myChart2" class="chart-doughnut"></canvas>
                                         <script>
                                           var ctx = document.getElementById('myChart2');
                                           var myChart2 = new Chart(ctx, {
                                           type: 'doughnut',
                                           data: {
-                                            labels: [
-                                                'Pembunuhan',
-                                                'Penculikan',
-                                                'Perampokan',
-                                                'Pencurian',
-                                                'Penggelapan'
-                                              ],
                                             datasets: [{
                                               // minBarLength: 100,
                                               data: [2, 2,2,2,2],
@@ -523,44 +516,49 @@
                                       </div>
                                     </div>
                                     <div class="col-12 text-center d-flex align-content-center align-items-center align-self-center justify-content-center">
-                                      <p class="font-medium text-bold text-title m-0 mt-2">Jenis Perkara</p>
+                                      <p class="font-medium text-bold text-title m-0 p-0 mt-2">Jenis Perkara</p>
                                     </div>
                                   </div>
-                                  <div class="row border-bottom">
-                                    <div class="col text-left">
-                                      <p class="font-small my-1">Pembunuhan</p>
+                                  <div class="row border-bottom mt-0">
+                                    <div class="col d-flex text-left">
+                                      <p class="mb-0" style="color:rgb(255, 99, 132)"><i class="fa fa-circle"></i></p>
+                                      <p class="font-small my-1 pl-1">Pembunuhan</p>
                                     </div>
                                     <div class="col text-right">
                                       <p class="font-small my-1">2 Kasus</p>
                                     </div>
                                   </div>
                                   <div class="row border-bottom">
-                                    <div class="col text-left">
-                                      <p class="font-small my-1">Penculikan</p>
-                                    </div>
-                                    <div class="col text-right">
-                                      <p class="font-small my-1">2 Kasus</p>
-                                    </div>  
-                                  </div>
-                                  <div class="row border-bottom">
-                                    <div class="col text-left">
-                                      <p class="font-small my-1">Perampokan</p>
+                                    <div class="col d-flex text-left">
+                                      <p class="mb-0" style="color:plum"><i class="fa fa-circle"></i></p>
+                                      <p class="font-small my-1 pl-1">Penculikan</p>
                                     </div>
                                     <div class="col text-right">
                                       <p class="font-small my-1">2 Kasus</p>
                                     </div>  
                                   </div>
                                   <div class="row border-bottom">
-                                    <div class="col text-left">
-                                      <p class="font-small my-1">Pencurian</p>
+                                    <div class="col d-flex text-left">
+                                      <p class="mb-0" style="color:rgb(54, 162, 235)"><i class="fa fa-circle"></i></p>
+                                      <p class="font-small my-1 pl-1">Perampokan</p>
+                                    </div>
+                                    <div class="col text-right">
+                                      <p class="font-small my-1">2 Kasus</p>
+                                    </div>  
+                                  </div>
+                                  <div class="row border-bottom">
+                                    <div class="col d-flex text-left">
+                                      <p class="mb-0" style="color:rgb(255, 205, 86)"><i class="fa fa-circle"></i></p>
+                                      <p class="font-small my-1 pl-1">Pencurian</p>
                                     </div>
                                     <div class="col text-right">
                                       <p class="font-small my-1">2 Kasus</p>
                                     </div>  
                                   </div>
                                   <div class="row">
-                                    <div class="col text-left">
-                                      <p class="font-small my-1">Penggelapan</p>
+                                    <div class="col d-flex text-left">
+                                      <p class="mb-0" style="color:lightgreen"><i class="fa fa-circle"></i></p>  
+                                      <p class="font-small my-1 pl-1">Penggelapan</p>
                                     </div>
                                     <div class="col text-right">
                                       <p class="font-small my-1">2 Kasus</p>
