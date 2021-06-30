@@ -1,11 +1,5 @@
-.test {
-  color: white;
-  text-align: center;
-  align-items: center;
-}
-
-.login {
-  margin-top: 150px;
+.main {
+  margin-left: 225px;
 }
 
 .mapid {
@@ -32,6 +26,11 @@
 
 .lebar {
   width: 100% !important;
+  margin-top: 3rem;
+}
+
+.text-dashboard {
+  margin-top: 3rem;
 }
 
 .active,
@@ -367,9 +366,6 @@
   background-color: #6a6a6a;
   min-height: 100vh;
   align-content: flex-start;
-}
-
-.fixed {
   position: fixed;
   z-index: 999;
 }
@@ -386,6 +382,11 @@
   height: fit-content;
 }
 
+/* .chart-doughnut {
+  height: 150px !important;
+  width: 150px !important;
+} */
+
 /* For mobile phones: */
 [class*="col-s-8"] {
   width: 70%;
@@ -400,6 +401,26 @@
   width: 40%;
 }
 
+@media screen and (max-width: 599px) {
+  .navbar {
+    position: relative;
+    min-height: 200px !important;
+  }
+
+  .main {
+    margin-left: 0% !important;
+  }
+
+  .lebar {
+    width: 100% !important;
+    margin-top: 0rem;
+  }
+
+  .text-dashboard {
+    margin-top: 1rem;
+  }
+}
+
 @media only screen and (max-width: 599px) {
   /* For handphone: */
   .title {
@@ -409,6 +430,24 @@
   .images {
     width: 100%;
   }
+
+  .navbar {
+    position: relative;
+    min-height: 200px !important;
+  }
+
+  .main {
+    margin-left: 0% !important;
+  }
+
+  .lebar {
+    width: 100% !important;
+    margin-top: 0rem;
+  }
+
+  .text-dashboard {
+    margin-top: 1rem;
+  }
 }
 @media only screen and (min-width: 600px) {
   /* For tablets: */
@@ -416,12 +455,47 @@
     margin-top: -30px;
     font-size: 16px !important;
   }
+
+  .navbar {
+    position: relative;
+    min-height: 200px !important;
+  }
+
+  .main {
+    margin-left: 0% !important;
+  }
+
+  .lebar {
+    width: 100% !important;
+    margin-top: 0rem;
+  }
+
+  .text-dashboard {
+    margin-top: 1rem;
+  }
 }
 @media only screen and (min-width: 768px) {
   /* For desktop: */
   .title {
     margin-top: -35px;
     font-size: 20px !important;
+  }
+  .navbar {
+    position: relative;
+    min-height: 200px !important;
+  }
+
+  .main {
+    margin-left: 0% !important;
+  }
+
+  .lebar {
+    width: 100% !important;
+    margin-top: 0rem;
+  }
+
+  .text-dashboard {
+    margin-top: 1rem;
   }
 }
 
