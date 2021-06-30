@@ -63,7 +63,7 @@
   font-weight: bold;
 }
 
-.text-left {
+.text-right {
   text-align: right;
 }
 
@@ -387,6 +387,15 @@
   width: 150px !important;
 } */
 
+/* image */
+/* .image-line {
+  width: 225;
+} */
+
+.image-icon {
+  max-width: 100%;
+}
+
 /* For mobile phones: */
 [class*="col-s-8"] {
   width: 70%;
@@ -448,6 +457,9 @@
   .text-dashboard {
     margin-top: 1rem;
   }
+  .card-atas {
+    font-size: 40px;
+  }
 }
 @media only screen and (min-width: 600px) {
   /* For tablets: */
@@ -473,6 +485,9 @@
   .text-dashboard {
     margin-top: 1rem;
   }
+  .card-atas {
+    font-size: 40px;
+  }
 }
 @media only screen and (min-width: 768px) {
   /* For desktop: */
@@ -497,6 +512,10 @@
   .text-dashboard {
     margin-top: 1rem;
   }
+
+  .card-atas {
+    font-size: 40px;
+  }
 }
 
 @media only screen and (min-width: 1100px) {
@@ -504,5 +523,14 @@
   .title {
     margin-top: -55px;
     font-size: 26px !important;
+  }
+
+  .lebar {
+    width: 100% !important;
+    margin-top: 3rem;
+  }
+
+  .text-dashboard {
+    margin-top: 3rem;
   }
 }
